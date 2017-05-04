@@ -40,14 +40,17 @@ init =
     )
 
 
+rentaSimple : Float
 rentaSimple =
     8.0
 
 
+rentaColloc : Float
 rentaColloc =
     10.0
 
 
+renta : Int -> Float
 renta collocs =
     if collocs > 1 then
         rentaColloc
@@ -159,6 +162,7 @@ view model =
         ]
 
 
+toPositiveInt : Int -> Int
 toPositiveInt i =
     if i < 1 then
         1
