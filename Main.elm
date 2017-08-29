@@ -126,7 +126,7 @@ view model =
                 [ Html.text
                     ("Loyer mensuel "
                         ++ (if model.collocs > 1 then
-                                " (par colloc)"
+                                " (par locataire)"
                             else
                                 ""
                            )
@@ -140,7 +140,7 @@ view model =
                 []
             ]
         , Html.div [ pad ]
-            [ Html.div [] [ Html.text "Nombre collocs (mettre à 1 si location simple)" ]
+            [ Html.div [] [ Html.text "Nombre de locataires" ]
             , Html.input
                 [ Html.Attributes.type_ "number"
                 , Html.Attributes.value (model.collocs |> toString)
